@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page1.page.scss'],
 })
 export class Page1Page implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  public num: number = 0;
+  checkOddEven() {
+    return this.num % 2 == 0 ? 'Even' : 'Odd';
   }
-
 }

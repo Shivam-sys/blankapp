@@ -5,8 +5,21 @@
 </ion-header>
 
 <ion-content>
-  <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    This is page 1
+  <div class="container" style="padding:10px;">
+    <ion-item-divider color="danger">Odd even checker</ion-item-divider>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Enter a number:
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="num" (ngModelChange)="checkOddEven()" placeholder="enter a number">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <h3>Entered number is <h2>{{checkOddEven()}}</h2>
+        </h3>
+      </ion-item>
+    </ion-list>
   </div>
 
 </ion-content>

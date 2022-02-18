@@ -10,4 +10,10 @@ export class Page2Page implements OnInit {
 
   ngOnInit() {}
   public n: any = 10;
+  public fname: string = '';
+  public lname: string = '';
+  public fullName: any = '';
+  getName() {
+    this.fullName = this.fname + ' ' + this.lname;
+  }
 }

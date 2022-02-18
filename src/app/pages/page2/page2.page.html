@@ -6,8 +6,29 @@
 
 <ion-content padding>
   <div class="container" style="padding: 10px;">
-    This is page 2
-    value={{n}}
+    <ion-list>
+      <ion-item>
+        This is page 2<br />
+        value={{n}}
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          First name:
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="fname" placeholder="Enter your first name" (ngModelChange)="getName()">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Last name:
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="lname" placeholder="Enter your last name" (ngModelChange)="getName()">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        Your full name is {{this.fullName}}
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
 <ion-footer>
