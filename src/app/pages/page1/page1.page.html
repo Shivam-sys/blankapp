@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title color="warning">A new Page</ion-title>
+    <ion-title color="warning">Check Odd even</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,6 +20,12 @@
         </h3>
       </ion-item>
     </ion-list>
+  </div>
+  <div class="container">
+    <ion-item-divider>Sum of digits</ion-item-divider>
+    <ion-label>Enter a number</ion-label>
+    <ion-input type="number" [(ngModel)]="num1"></ion-input>
+    <ion-text color="primary">Sum of digits is <b>{{sumOfDigits()}}</b></ion-text>
   </div>
 
 </ion-content>

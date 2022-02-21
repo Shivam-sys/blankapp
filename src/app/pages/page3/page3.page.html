@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>page3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar color="success">
+      <ion-title> Calculating String length</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-input type="text" placeholder="Enter a number" [(ngModel)]="name"></ion-input>
+
+  <ion-input type="text" placeholder="Enter a name" [(ngModel)]="nm"></ion-input>
+
+  <ion-button (click)="show();"> factorial is </ion-button>
+  <ion-button (click)="show1();"> Length is </ion-button>
+  {{this.lt}}
+  {{this.ft}}
+
+</ion-content>
+<ion-footer>
+  <ion-button routerLink="/">
+    Home
+  </ion-button>
+</ion-footer>

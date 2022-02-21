@@ -13,4 +13,15 @@ export class Page1Page implements OnInit {
   checkOddEven() {
     return this.num % 2 == 0 ? 'Even' : 'Odd';
   }
+  public num1: number;
+  public sumofdigits: number;
+  sumOfDigits() {
+    let sumofdigits = 0;
+    let n = this.num1;
+    while (n) {
+      sumofdigits = sumofdigits + (n % 10);
+      n = Math.floor(n / 10);
+    }
+    return sumofdigits;
+  }
 }

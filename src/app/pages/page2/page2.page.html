@@ -1,5 +1,8 @@
+<!-- 
+Create a selection list to move to another page
+<ion-button (click)={{course}}> -->
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>page2</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -27,6 +30,78 @@
       </ion-item>
       <ion-item>
         Your full name is {{this.fullName}}
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="container">
+    <h1>Select</h1>
+    <ion-label>
+      Select an option
+    </ion-label>
+    <ion-select [(ngModel)]="book" interface="popover">
+      <ion-select-option value="opt1">
+        Book 1
+      </ion-select-option>
+      <ion-select-option value="opt2">
+        Book 2
+      </ion-select-option>
+      <ion-select-option value="opt3">
+        Book 3
+      </ion-select-option>
+    </ion-select>
+    <h3>You selected {{book||'none'}}</h3>
+  </div>
+  <div class="container">
+    <h1>Radio</h1>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="lang">
+        <ion-list-header>
+          <ion-labe>Select Language</ion-labe>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            JAVA
+          </ion-label>
+          <ion-radio checked="true" value="JAVA"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Python
+          </ion-label>
+          <ion-radio value="Python"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            C
+          </ion-label>
+          <ion-radio value="c" disabled="true"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-item>
+        <ion-text color="primary">You selected {{lang||'none'}}</ion-text>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="container">
+    <h1>Checkbox</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          English
+        </ion-label>
+        <ion-checkbox value="English" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Hindi
+        </ion-label>
+        <ion-checkbox value="Hindi" color="tertiary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          German
+        </ion-label>
+        <ion-checkbox value="German" color="danger"></ion-checkbox>
       </ion-item>
     </ion-list>
   </div>
